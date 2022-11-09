@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap');
 
 :root {
-    --transparent-white: rgba(228, 244, 250, 0.3);
-    --transparent-black: rgba(0, 0, 0, 0.6);
+    --transparent-white: rgba(228, 244, 250, 0.15);
+    --transparent-blue: rgba(186, 242, 252, 0.5);
+    --transparent-black: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -54,58 +56,105 @@ body {
 }
 
 .form-wrapper {
-    background: var(--transparent-white);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 28px;
-    font-size: 1.2rem;
+    background: var(--transparent-blue);
+    font-family: 'Roboto', Verdana, sans-serif;
+    padding: 28px 64px;
     position: absolute;
     left: 200px;
     min-height: 100vh;
-    border-top-right-radius: 48px;
+    border-top-right-radius: 72px;
+    box-shadow: 0 0 16px var(--transparent-black);
 }
 
-.form-wrapper h2 {
-    font-weight: bold;
-    font-size: 2rem;
+.form-wrapper > p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+}
+
+form h2 {
+    padding: 12px 0;
+    margin: 24px 0;
+    width: 400px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-weight: 900;
+    letter-spacing: 0.65rem;
+}
+
+label {
+    padding-bottom: 4px;
 }
 
 button,
 input {
     font-family: inherit;
     font-size: 100%;
-    width: 300px;
+    width: 400px;
 }
 
 input {
-    margin-bottom: 16px;
+    margin-bottom: 28px;
     border: 0;
     border-radius: 4px;
 }
 
 input:focus {
     border: 2px solid cornflowerblue;
+    outline: 0;
 }
 
 input[type="password"]:invalid {
     border: 2px solid red;
 }
 
-.subscribe {
+.error {
+    display: none;
+    margin-top: -1rem;
     font-size: .8rem;
+    font-weight: 900;
+    color: darkred;
+}
+
+button[type="submit"] {
+    cursor: pointer;
+    border: 0;
+    padding: 6px 0;
+    background-color: #2eaad3;
+    color: #eff;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #cf23cf;
+}
+
+input[type="checkbox"] {
+    width: 32px;
+}
+
+.subscribe {
+    font-size: .85rem;
+    margin-left: 36px;
 }
 
 .optional {
    font-weight: 100;
-
 }
 
 .required::after {
     content: "REQUIRED";
+    position: relative;
+    top: -3px;
     margin-left: 1em;
     padding: 2px 6px;
     color: #fff;
@@ -113,4 +162,14 @@ input[type="password"]:invalid {
     border-radius: 4px;
     font-size: 0.7rem;
     font-weight: bold;   
+}
+
+.login {
+    margin-top: 16px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.login a {
+    text-decoration: none;
 }

@@ -11,15 +11,16 @@
     <div class="logo-wrapper">
         <div class="logo-banner">
             <img src="./img/primitives_logo_outlined.svg" alt="Vector line of image of intertwined circles above a triangle">
-            <h1>PRIMITIVE</h1>
+            <h1>PRIMITIVES</h1>
         </div>
     </div>
     <div class="form-wrapper">
-        <h2>This is not a real online service!</h2>
-        <p>But if it was you would want it. Bad. <br>
-           Sign up now to get started.</p>
+        <p>This is not a real online service!<br>
+           But if it was you would want it. Bad. <br>
+           Waste no time &mdash; <i>sign up now.</i></p>
         <form action="" method="post">
-            <h2>Let's do this</h2>
+            <h2>GET STARTED</h2>
+            <label for="first-name">First Name</label>
             <input type="text" id="first-name" name="first_name" />
 
             <label for="last-name">Last Name</label>
@@ -29,20 +30,23 @@
             <input type="email" id="email" name="user_email" required/>
 
             <label for="phone">Phone <span class="optional"><em>(Recommended)</em></span></label>
-            <input type="tel" id="phone" name="user_phone" />
+            <input type="tel" id="phone" name="user_phone" minlength="10" />
 
             <label for="password" class="required">Password</label>
             <input type="password" id="password" name="user_password" required />
 
             <label for="password-confirm" class="required">Confirm Password</label>
             <input type="password" id="password-confirm" name="user_password_confirm" required />
+            <p class="error">Passwords do not match</p>
 
             <button type="submit">Create Account</button>
             
-            <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" checked>
-            <label for="newsletter" class="subscribe">Let me know about secret parties</label>
+            <div class="subscribe">
+                <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" checked>
+                <label for="newsletter">Let me know about secret parties</label>
+            </div>
             
-            <p>Already have an account? <a href="">Log in</a></p>
+            <p class="login">Already have an account? <a href="">Log in</a></p>
         </form>
     </div>
 </body>
