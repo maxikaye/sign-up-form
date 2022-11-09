@@ -3,7 +3,6 @@ let passwordConfirmField = document.getElementById("password-confirm");
 let userPassword, userPasswordConfirm;
 const passwordError = document.querySelector(".error");
 
-
 passwordField.addEventListener('input', e => {
     userPassword = e.target.value;
 })

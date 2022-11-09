@@ -111,6 +111,10 @@ input:focus {
     outline: 0;
 }
 
+input[type="tel"] {
+    margin-bottom: 12px;
+}
+
 input[type="password"]:invalid {
     border: 2px solid red;
 }
@@ -121,6 +125,16 @@ input[type="password"]:invalid {
     font-size: .8rem;
     font-weight: 900;
     color: darkred;
+}
+
+.instructions {
+    width: 400px;
+    background-color: var(--transparent-blue);
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 8px 0 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
 }
 
 button[type="submit"] {

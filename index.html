@@ -30,10 +30,15 @@
             <input type="email" id="email" name="user_email" required/>
 
             <label for="phone">Phone <span class="optional"><em>(Recommended)</em></span></label>
-            <input type="tel" id="phone" name="user_phone" minlength="10" />
-
+            <input type="tel" id="phone" name="user_phone" minlength="10" placeholder="000-000-0000"
+            pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Please input a US based phone number" />
+            
+            <p class="instructions">*Create passwords with 8-24 characters and at least 1 special character</p>
             <label for="password" class="required">Password</label>
-            <input type="password" id="password" name="user_password" minlength="8" maxlength="24" required />
+            <input type="password" id="password" name="user_password" 
+            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+            title="Create passwords with 8-24 characters and at least 1 special character"
+            minlength="8" maxlength="24" required />
 
             <label for="password-confirm" class="required">Confirm Password</label>
             <input type="password" id="password-confirm" name="user_password_confirm" minlength="8" maxlength="24" required />
