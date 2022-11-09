@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
+
+:root {
+    --transparent-white: rgba(228, 244, 250, 0.3);
+    --transparent-black: rgba(0, 0, 0, 0.6);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background: url("./img/mk_staug_sunrise.jpg") no-repeat;
+    min-height: 100vh;
+    display: flex;
+}
+
+.logo-wrapper {
+    transform: rotate(-90deg);
+}
+
+.logo-banner {
+    background-color: var(--transparent-black);
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.logo-banner h1 {
+    font-family: 'Alumni Sans Inline One', 'Impact', sans-serif;
+    font-size: 8rem;
+    letter-spacing: .5rem;
+    color: #fff;
+    background: linear-gradient(to right, #f32170,
+                    #ffa908, #cf23cf, #79fff2);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                
+    text-shadow: 0px 6px 0 var(--transparent-white),
+                 0px -8px 0 var(--transparent-white);
+                 
+}
+
+.logo-banner img {
+    width: 80px;
+}
+
+.form-wrapper {
+    background: var(--transparent-white);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 28px;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 200px;
+    min-height: 100vh;
+    border-top-right-radius: 48px;
+}
+
+.form-wrapper h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button,
+input {
+    font-family: inherit;
+    font-size: 100%;
+    width: 300px;
+}
+
+input {
+    margin-bottom: 16px;
+    border: 0;
+    border-radius: 4px;
+}
+
+input:focus {
+    border: 2px solid cornflowerblue;
+}
+
+input[type="password"]:invalid {
+    border: 2px solid red;
+}
+
+.subscribe {
+    font-size: .8rem;
+}
+
+.optional {
+   font-weight: 100;
+
+}
+
+.required::after {
+    content: "REQUIRED";
+    margin-left: 1em;
+    padding: 2px 6px;
+    color: #fff;
+    background: red;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;   
+}
